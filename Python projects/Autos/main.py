@@ -1,8 +1,14 @@
 import psycopg2
 
 
-def llamarTabla(t):
-    nombreTabla = str(t)
+def comp(t):
+    llamandoTabla = "SELECT * FROM "+str(t)
+    print(llamandoTabla)
+    return str(llamandoTabla)
+
+
+def llamarTabla(tabla):
+    nombreTabla=comp(tabla)
     cursor = connection.cursor()
     cursor.execute(nombreTabla)
     row = cursor.fetchone()
@@ -12,9 +18,9 @@ def llamarTabla(t):
     for row in rows:
         print(row)
 
-    connection.commit()
-    cursor.close()
-    connection.close()
+   
+
+
 
 
 try:
@@ -26,7 +32,10 @@ try:
         password='my_password',
     )
     print("Conexion segura")
-    llamarTabla("SELECT * FROM vendedor;")
+    llamarTabla("vendedor")
+    print("\n")
+    llamarTabla("concesionaria")
+
     
 except Exception as e:
     print(e)

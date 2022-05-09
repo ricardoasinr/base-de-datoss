@@ -2,12 +2,28 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="DB-221.5591.9">
     <data-source name="postgres@localhost" uuid="a7ed48f2-c6ca-4c6d-858d-2ccb473ecac2">
-      <database-info product="PostgreSQL" version="13.6 (Debian 13.6-1.pgdg110+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.3.3" dbms="POSTGRES" exact-version="13.6" exact-driver-version="42.3">
+      <database-info product="PostgreSQL" version="13.6 (Debian 13.6-1.pgdg110+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.3.3" dbms="POSTGRES" exact-version="13.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@localhost" uuid="006ebfe9-0628-4038-bcf7-ffa06d505d9a">
+      <database-info product="Microsoft SQL Server" version="15.00.2000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 10.2 for SQL Server" driver-version="10.2.0.0" dbms="AZURE" exact-version="15.0.2000" exact-driver-version="10.2">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="@">

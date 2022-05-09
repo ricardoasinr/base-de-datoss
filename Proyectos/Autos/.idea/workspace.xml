@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a938878a-98b6-47db-bb5e-13aa9af3fa00" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Python projects/Autos2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Apps/Conection1/packages/Microsoft.Data.SqlClient.4.1.0/.Microsoft.Data.SqlClient.4.1.0.nupkg.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Apps/Conection1/packages/Microsoft.Identity.Client.4.22.0/.Microsoft.Identity.Client.4.22.0.nupkg.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Apps/Conection1/packages/System.Runtime.4.3.0/.System.Runtime.4.3.0.nupkg.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7ed48f2-c6ca-4c6d-858d-2ccb473ecac2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7ed48f2-c6ca-4c6d-858d-2ccb473ecac2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python projects/Autos/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python projects/Autos/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,19 +28,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ricardoasin/Desktop/Semestre012022/Base de Datos/Proyectos/Autos&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/ricardoasin/Desktop/Semestre012022/Base de Datos/Proyectos/Autos"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "azure",
+      "sqlserver",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />

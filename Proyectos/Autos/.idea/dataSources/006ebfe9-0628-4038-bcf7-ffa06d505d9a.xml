@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="AZURE" family-id="AZURE" format-version="4.39">
+    <root id="1">
+      <Dbms>AZURE</Dbms>
+      <ServerVersion>15.0.2000</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="master">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <Current>1</Current>
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@d37de751ac06</Fingerprint>
+      <Grants>1|database||1|connect|G
+1|database||2|connect|G
+1|database||5|connect|G
+1|database||6|connect|G
+1|database||6|execute|G
+1|database||0|view any column encryption key definition|G
+1|database||0|view any column master key definition|G</Grants>
+      <ObjectId>1</ObjectId>
+      <PermissionsCheckSum>7998723517</PermissionsCheckSum>
+    </database>
+    <database id="3" parent="1" name="tempdb">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="4" parent="1" name="model">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="5" parent="1" name="msdb">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="6" parent="1" name="BDASIN">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>5</ObjectId>
+    </database>
+    <login id="7" parent="1" name="sa">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>1</ObjectId>
+    </login>
+    <login id="8" parent="1" name="public">
+      <Enabled>1</Enabled>
+      <ObjectId>2</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="9" parent="1" name="sysadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>3</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="10" parent="1" name="securityadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>4</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="11" parent="1" name="serveradmin">
+      <Enabled>1</Enabled>
+      <ObjectId>5</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="12" parent="1" name="setupadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>6</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="13" parent="1" name="processadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>7</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="14" parent="1" name="diskadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>8</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="15" parent="1" name="dbcreator">
+      <Enabled>1</Enabled>
+      <ObjectId>9</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="16" parent="1" name="bulkadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>10</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="17" parent="1" name="##MS_ServerStateReader##">
+      <Enabled>1</Enabled>
+      <ObjectId>11</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="18" parent="1" name="##MS_ServerStateManager##">
+      <Enabled>1</Enabled>
+      <ObjectId>12</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="19" parent="1" name="##MS_DefinitionReader##">
+      <Enabled>1</Enabled>
+      <ObjectId>13</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="20" parent="1" name="##MS_SQLResourceSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>101</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="21" parent="1" name="##MS_SQLReplicationSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>102</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="22" parent="1" name="##MS_SQLAuthenticatorCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>103</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="23" parent="1" name="##MS_PolicySigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>105</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="24" parent="1" name="##MS_SmoExtendedSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>106</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="25" parent="1" name="##MS_PolicyEventProcessingLogin##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <ObjectId>256</ObjectId>
+    </login>
+    <login id="26" parent="1" name="##MS_PolicyTsqlExecutionLogin##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <ObjectId>257</ObjectId>
+    </login>
+    <login id="27" parent="1" name="##MS_AgentSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>258</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="28" parent="1" name="BUILTIN\Administrators">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>259</ObjectId>
+      <Type>windows-group</Type>
+    </login>
+    <login id="29" parent="1" name="NT AUTHORITY\SYSTEM">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>260</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="30" parent="1" name="NT AUTHORITY\NETWORK SERVICE">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>261</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <role id="31" parent="2" name="##MS_AgentSigningCertificate##">
+      <AuthType>none</AuthType>
+      <ObjectId>6</ObjectId>
+      <Type>certificate-mapped-user</Type>
+    </role>
+    <role id="32" parent="2" name="##MS_PolicyEventProcessingLogin##">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>5</ObjectId>
+    </role>
+    <role id="33" parent="2" name="INFORMATION_SCHEMA">
+      <AuthType>none</AuthType>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="34" parent="2" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="35" parent="2" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="36" parent="2" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="37" parent="2" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="38" parent="2" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="39" parent="2" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="40" parent="2" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="41" parent="2" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="42" parent="2" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="43" parent="2" name="dbo">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>1</ObjectId>
+    </role>
+    <role id="44" parent="2" name="guest">
+      <AuthType>none</AuthType>
+      <DefaultSchema>guest</DefaultSchema>
+      <ObjectId>2</ObjectId>
+    </role>
+    <role id="45" parent="2" name="public">
+      <AuthType>none</AuthType>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="46" parent="2" name="sys">
+      <AuthType>none</AuthType>
+      <ObjectId>4</ObjectId>
+    </role>
+    <schema id="47" parent="2" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="48" parent="2" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="49" parent="2" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="50" parent="2" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="51" parent="2" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="52" parent="2" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="53" parent="2" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="54" parent="2" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="55" parent="2" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="56" parent="2" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="57" parent="2" name="dbo">
+      <Current>1</Current>
+      <Grants>117575457|||0|select|G
+133575514|||0|select|G
+149575571|||0|select|G
+1787153412|||0|select|G
+1803153469|||0|select|G</Grants>
+      <IntrospectionTimestamp>2022-05-07.02:21:07.390</IntrospectionTimestamp>
+      <ObjectId>1</ObjectId>
+      <PermissionsCheckSum>7026290343</PermissionsCheckSum>
+    </schema>
+    <schema id="58" parent="2" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="59" parent="2" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <routine id="60" parent="57" name="sp_MScleanupmergepublisher">
+      <CreatedTimestamp>2022-01-14.11:56:50.907</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.340</ModifiedTimestamp>
+      <ObjectId>2139154666</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>100</SourceTextLength>
+    </routine>
+    <routine id="61" parent="57" name="sp_MSrepl_startup">
+      <CreatedTimestamp>2022-01-14.11:56:50.897</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.337</ModifiedTimestamp>
+      <ObjectId>2123154609</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>83</SourceTextLength>
+    </routine>
+    <table id="62" parent="57" name="MSreplication_options">
+      <CreatedTimestamp>2022-01-14.11:56:50.873</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.333</ModifiedTimestamp>
+      <ObjectId>2107154552</ObjectId>
+    </table>
+    <table id="63" parent="57" name="automovil">
+      <CreatedTimestamp>2022-05-07.02:15:47.960</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:17:12.687</ModifiedTimestamp>
+      <ObjectId>791673868</ObjectId>
+    </table>
+    <table id="64" parent="57" name="concesionaria">
+      <CreatedTimestamp>2022-05-07.02:04:42.630</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:59.103</ModifiedTimestamp>
+      <ObjectId>599673184</ObjectId>
+    </table>
+    <table id="65" parent="57" name="equipo">
+      <CreatedTimestamp>2022-05-07.02:15:37.763</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:51.780</ModifiedTimestamp>
+      <ObjectId>695673526</ObjectId>
+    </table>
+    <table id="66" parent="57" name="modelo">
+      <CreatedTimestamp>2022-05-07.02:15:31.493</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:47.977</ModifiedTimestamp>
+      <ObjectId>663673412</ObjectId>
+    </table>
+    <table id="67" parent="57" name="serie">
+      <CreatedTimestamp>2022-05-07.02:15:51.723</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:51.723</ModifiedTimestamp>
+      <ObjectId>855674096</ObjectId>
+    </table>
+    <table id="68" parent="57" name="serviciosof">
+      <CreatedTimestamp>2022-05-07.02:15:55.300</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:59.103</ModifiedTimestamp>
+      <ObjectId>919674324</ObjectId>
+    </table>
+    <table id="69" parent="57" name="spt_fallback_db">
+      <CreatedTimestamp>2003-04-08.05:18:01.557</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.317</ModifiedTimestamp>
+      <ObjectId>117575457</ObjectId>
+    </table>
+    <table id="70" parent="57" name="spt_fallback_dev">
+      <CreatedTimestamp>2003-04-08.05:18:02.870</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.320</ModifiedTimestamp>
+      <ObjectId>133575514</ObjectId>
+    </table>
+    <table id="71" parent="57" name="spt_fallback_usg">
+      <CreatedTimestamp>2003-04-08.05:18:04.180</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.323</ModifiedTimestamp>
+      <ObjectId>149575571</ObjectId>
+    </table>
+    <table id="72" parent="57" name="spt_monitor">
+      <CreatedTimestamp>2022-01-14.11:56:01.273</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:57:01.330</ModifiedTimestamp>
+      <ObjectId>1803153469</ObjectId>
+    </table>
+    <table id="73" parent="57" name="tipoequipo">
+      <CreatedTimestamp>2022-05-07.02:15:43.747</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:43.747</ModifiedTimestamp>
+      <ObjectId>727673640</ObjectId>
+    </table>
+    <table id="74" parent="57" name="vendedor">
+      <CreatedTimestamp>2022-05-07.02:15:59.077</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:17:57.573</ModifiedTimestamp>
+      <ObjectId>967674495</ObjectId>
+    </table>
+    <table id="75" parent="57" name="venta">
+      <CreatedTimestamp>2022-05-07.02:16:02.127</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:17:57.563</ModifiedTimestamp>
+      <ObjectId>1031674723</ObjectId>
+    </table>
+    <view id="76" parent="57" name="spt_values">
+      <CreatedTimestamp>2022-01-14.11:56:01.250</CreatedTimestamp>
+      <ModifiedTimestamp>2022-01-14.11:56:01.273</ModifiedTimestamp>
+      <ObjectId>1787153412</ObjectId>
+      <SourceTextLength>161</SourceTextLength>
+    </view>
+    <column id="77" parent="62" name="optname">
+      <DataType>sysname|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="78" parent="62" name="value">
+      <DataType>bit|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="79" parent="62" name="major_version">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="80" parent="62" name="minor_version">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="81" parent="62" name="revision">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="82" parent="62" name="install_failures">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="83" parent="63" name="NroChasis">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="84" parent="63" name="NITCS">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="85" parent="63" name="CodModelo">
+      <DataType>varchar(20 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="86" parent="63" name="Color">
+      <DataType>varchar(15 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="87" parent="63" name="FechaFabricacion">
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="88" parent="63" name="LugarFabricacion">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="89" parent="63" name="Descuento">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="90" parent="63" name="Estado">
+      <DataType>varchar(10 char)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="91" parent="63" name="FK_conce">
+      <ColNames>NITCS</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:47.970</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:47.970</ModifiedTimestamp>
+      <ObjectId>823673982</ObjectId>
+      <RefColNames>NITCS</RefColNames>
+      <RefKeyName>PK_conce</RefKeyName>
+      <RefTableId>599673184</RefTableId>
+      <RefTableName>concesionaria</RefTableName>
+    </foreign-key>
+    <foreign-key id="92" parent="63" name="FK_modelo">
+      <ColNames>CodModelo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:47.977</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:47.977</ModifiedTimestamp>
+      <ObjectId>839674039</ObjectId>
+      <RefColNames>codmodelo</RefColNames>
+      <RefKeyName>PK_modelo</RefKeyName>
+      <RefTableId>663673412</RefTableId>
+      <RefTableName>modelo</RefTableName>
+    </foreign-key>
+    <index id="93" parent="63" name="PK_chasis">
+      <Clustering>1</Clustering>
+      <ColNames>NroChasis</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="63" name="PK_chasis">
+      <ColNames>NroChasis</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:47.967</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:47.967</ModifiedTimestamp>
+      <ObjectId>807673925</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_chasis</UnderlyingIndexName>
+    </key>
+    <column id="95" parent="64" name="NITCS">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="96" parent="64" name="NombreCS">
+      <DataType>char(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="97" parent="64" name="DireccionCS">
+      <DataType>char(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="98" parent="64" name="TelefonoCS">
+      <DataType>decimal(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="99" parent="64" name="PK_conce">
+      <Clustering>1</Clustering>
+      <ColNames>NITCS</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="100" parent="64" name="PK_conce">
+      <ColNames>NITCS</ColNames>
+      <CreatedTimestamp>2022-05-07.02:04:42.750</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:04:42.750</ModifiedTimestamp>
+      <ObjectId>615673241</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_conce</UnderlyingIndexName>
+    </key>
+    <column id="101" parent="65" name="codequipo">
+      <DataType>decimal(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="102" parent="65" name="descripcion">
+      <DataType>varchar(40 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="103" parent="65" name="precio">
+      <DataType>decimal(10,2)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="104" parent="65" name="PK_equipo">
+      <Clustering>1</Clustering>
+      <ColNames>codequipo</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="105" parent="65" name="PK_equipo">
+      <ColNames>codequipo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:37.773</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:37.773</ModifiedTimestamp>
+      <ObjectId>711673583</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_equipo</UnderlyingIndexName>
+    </key>
+    <column id="106" parent="66" name="codmodelo">
+      <DataType>varchar(20 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="107" parent="66" name="marca">
+      <DataType>varchar(20 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="108" parent="66" name="NroPuertas">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="109" parent="66" name="cilindradas">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="110" parent="66" name="NroRuedas">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="111" parent="66" name="Procedencia">
+      <DataType>varchar(100 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="112" parent="66" name="CodPasajeros">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="113" parent="66" name="PK_modelo">
+      <Clustering>1</Clustering>
+      <ColNames>codmodelo</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="114" parent="66" name="PK_modelo">
+      <ColNames>codmodelo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:31.663</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:31.663</ModifiedTimestamp>
+      <ObjectId>679673469</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_modelo</UnderlyingIndexName>
+    </key>
+    <column id="115" parent="67" name="codequipo">
+      <DataType>decimal(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="116" parent="67" name="nrochasis">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="117" parent="67" name="NroSerie">
+      <DataType>varchar(25 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="118" parent="67" name="FK_seriequipo">
+      <ColNames>codequipo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:51.770</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:51.770</ModifiedTimestamp>
+      <ObjectId>887674210</ObjectId>
+      <RefColNames>codequipo</RefColNames>
+      <RefKeyName>PK_equipo</RefKeyName>
+      <RefTableId>695673526</RefTableId>
+      <RefTableName>equipo</RefTableName>
+    </foreign-key>
+    <foreign-key id="119" parent="67" name="FK_autoequipo">
+      <ColNames>nrochasis</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:51.780</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:51.780</ModifiedTimestamp>
+      <ObjectId>903674267</ObjectId>
+      <RefColNames>NroChasis</RefColNames>
+      <RefKeyName>PK_chasis</RefKeyName>
+      <RefTableId>791673868</RefTableId>
+      <RefTableName>automovil</RefTableName>
+    </foreign-key>
+    <index id="120" parent="67" name="PK_serie">
+      <Clustering>1</Clustering>
+      <ColNames>codequipo
+nrochasis</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="121" parent="67" name="PK_serie">
+      <ColNames>codequipo
+nrochasis</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:51.753</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:51.753</ModifiedTimestamp>
+      <ObjectId>871674153</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_serie</UnderlyingIndexName>
+    </key>
+    <column id="122" parent="68" name="NITSO">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="123" parent="68" name="NITCS">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="124" parent="68" name="NombreSO">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="125" parent="68" name="DireccionSO">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="126" parent="68" name="TelefonoSO">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <foreign-key id="127" parent="68" name="FK_ServOf_Conce">
+      <ColNames>NITCS</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:55.327</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:55.327</ModifiedTimestamp>
+      <ObjectId>951674438</ObjectId>
+      <RefColNames>NITCS</RefColNames>
+      <RefKeyName>PK_conce</RefKeyName>
+      <RefTableId>599673184</RefTableId>
+      <RefTableName>concesionaria</RefTableName>
+    </foreign-key>
+    <index id="128" parent="68" name="PK_ServOficial">
+      <Clustering>1</Clustering>
+      <ColNames>NITSO</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="129" parent="68" name="PK_ServOficial">
+      <ColNames>NITSO</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:55.320</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:55.320</ModifiedTimestamp>
+      <ObjectId>935674381</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_ServOficial</UnderlyingIndexName>
+    </key>
+    <column id="130" parent="69" name="xserver_name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="131" parent="69" name="xdttm_ins">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="132" parent="69" name="xdttm_last_ins_upd">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="133" parent="69" name="xfallback_dbid">
+      <DataType>smallint|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="134" parent="69" name="name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="135" parent="69" name="dbid">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="136" parent="69" name="status">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="137" parent="69" name="version">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="138" parent="70" name="xserver_name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="139" parent="70" name="xdttm_ins">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="140" parent="70" name="xdttm_last_ins_upd">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="141" parent="70" name="xfallback_low">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="142" parent="70" name="xfallback_drive">
+      <DataType>char(2 char)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="143" parent="70" name="low">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="144" parent="70" name="high">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="145" parent="70" name="status">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="146" parent="70" name="name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="147" parent="70" name="phyname">
+      <DataType>varchar(127 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="148" parent="71" name="xserver_name">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="149" parent="71" name="xdttm_ins">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="150" parent="71" name="xdttm_last_ins_upd">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="151" parent="71" name="xfallback_vstart">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="152" parent="71" name="dbid">
+      <DataType>smallint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="153" parent="71" name="segmap">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="154" parent="71" name="lstart">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="155" parent="71" name="sizepg">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="156" parent="71" name="vstart">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="157" parent="72" name="lastrun">
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="158" parent="72" name="cpu_busy">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="159" parent="72" name="io_busy">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="160" parent="72" name="idle">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="161" parent="72" name="pack_received">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="162" parent="72" name="pack_sent">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="163" parent="72" name="connections">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="164" parent="72" name="pack_errors">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <column id="165" parent="72" name="total_read">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="166" parent="72" name="total_write">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="167" parent="72" name="total_errors">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="168" parent="73" name="Codmodelo">
+      <DataType>varchar(20 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="169" parent="73" name="Codequipo">
+      <DataType>decimal(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="170" parent="73" name="Tipoequipo">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="171" parent="73" name="fk_Tipo_Modelo">
+      <ColNames>Codmodelo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:43.880</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:43.880</ModifiedTimestamp>
+      <ObjectId>759673754</ObjectId>
+      <RefColNames>codmodelo</RefColNames>
+      <RefKeyName>PK_modelo</RefKeyName>
+      <RefTableId>663673412</RefTableId>
+      <RefTableName>modelo</RefTableName>
+    </foreign-key>
+    <foreign-key id="172" parent="73" name="fk_Tipo_Equipo">
+      <ColNames>Codequipo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:43.973</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:43.973</ModifiedTimestamp>
+      <ObjectId>775673811</ObjectId>
+      <RefColNames>codequipo</RefColNames>
+      <RefKeyName>PK_equipo</RefKeyName>
+      <RefTableId>695673526</RefTableId>
+      <RefTableName>equipo</RefTableName>
+    </foreign-key>
+    <index id="173" parent="73" name="pk_Tipo">
+      <Clustering>1</Clustering>
+      <ColNames>Codmodelo
+Codequipo</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="174" parent="73" name="pk_Tipo">
+      <ColNames>Codmodelo
+Codequipo</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:43.783</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:43.783</ModifiedTimestamp>
+      <ObjectId>743673697</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>pk_Tipo</UnderlyingIndexName>
+    </key>
+    <column id="175" parent="74" name="CodVendedor">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="176" parent="74" name="nitcs">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="177" parent="74" name="nitso">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="178" parent="74" name="NombreV">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="179" parent="74" name="TelefonoV">
+      <DataType>varchar(30 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="180" parent="74" name="Email">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="181" parent="74" name="FK_Vendedor_Concesionaria">
+      <ColNames>nitcs</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:59.100</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:59.100</ModifiedTimestamp>
+      <ObjectId>999674609</ObjectId>
+      <RefColNames>NITCS</RefColNames>
+      <RefKeyName>PK_conce</RefKeyName>
+      <RefTableId>599673184</RefTableId>
+      <RefTableName>concesionaria</RefTableName>
+    </foreign-key>
+    <foreign-key id="182" parent="74" name="FK_Vendedor_ServOficial">
+      <ColNames>nitso</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:59.103</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:59.103</ModifiedTimestamp>
+      <ObjectId>1015674666</ObjectId>
+      <RefColNames>NITSO</RefColNames>
+      <RefKeyName>PK_ServOficial</RefKeyName>
+      <RefTableId>919674324</RefTableId>
+      <RefTableName>serviciosof</RefTableName>
+    </foreign-key>
+    <index id="183" parent="74" name="PK_Vendedor">
+      <Clustering>1</Clustering>
+      <ColNames>CodVendedor</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="184" parent="74" name="PK_Vendedor">
+      <ColNames>CodVendedor</ColNames>
+      <CreatedTimestamp>2022-05-07.02:15:59.093</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:15:59.093</ModifiedTimestamp>
+      <ObjectId>983674552</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Vendedor</UnderlyingIndexName>
+    </key>
+    <column id="185" parent="75" name="Factura">
+      <DataType>decimal(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="186" parent="75" name="codvendedor">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="187" parent="75" name="Fecha">
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="188" parent="75" name="Lugar">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="189" parent="75" name="CostoVenta">
+      <DataType>decimal(10,2)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="190" parent="75" name="MetodoDePago">
+      <DataType>varchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="191" parent="75" name="FK_Vendedores_Concesionarios">
+      <ColNames>codvendedor</ColNames>
+      <CreatedTimestamp>2022-05-07.02:17:57.567</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:17:57.567</ModifiedTimestamp>
+      <ObjectId>1079674894</ObjectId>
+      <RefColNames>CodVendedor</RefColNames>
+      <RefKeyName>PK_Vendedor</RefKeyName>
+      <RefTableId>967674495</RefTableId>
+      <RefTableName>vendedor</RefTableName>
+    </foreign-key>
+    <foreign-key id="192" parent="75" name="FK_vendedor">
+      <ColNames>codvendedor</ColNames>
+      <CreatedTimestamp>2022-05-07.02:16:02.143</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:16:02.143</ModifiedTimestamp>
+      <ObjectId>1063674837</ObjectId>
+      <RefColNames>CodVendedor</RefColNames>
+      <RefKeyName>PK_Vendedor</RefKeyName>
+      <RefTableId>967674495</RefTableId>
+      <RefTableName>vendedor</RefTableName>
+    </foreign-key>
+    <index id="193" parent="75" name="PK_venta">
+      <Clustering>1</Clustering>
+      <ColNames>Factura</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="194" parent="75" name="PK_venta">
+      <ColNames>Factura</ColNames>
+      <CreatedTimestamp>2022-05-07.02:16:02.140</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-07.02:16:02.140</ModifiedTimestamp>
+      <ObjectId>1047674780</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_venta</UnderlyingIndexName>
+    </key>
+    <column id="195" parent="76" name="name">
+      <DataType>nvarchar(35 char)|0s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="196" parent="76" name="number">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="197" parent="76" name="type">
+      <DataType>nchar(3 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="198" parent="76" name="low">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="199" parent="76" name="high">
+      <DataType>int|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="200" parent="76" name="status">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+  </database-model>
+</dataSource>

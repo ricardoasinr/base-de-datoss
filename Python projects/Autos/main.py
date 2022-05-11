@@ -194,7 +194,51 @@ def verificarEstado(chasis):
     return (disponibilidad)
 
 def registroVenta():
-    
+    print("------------------")
+    exitosa = 0
+    print("Registrando venta: ")
+    Factura = input("Factura: ")
+    codvendedor = input("*Codigo del vendedor: ")
+    print("Por favor introcir de la siguiente manera '20190518' = 18/5/2019 ")
+    Fecha = input("Fecha [Hoy]: ")
+    Lugar = input("Lugar: ")
+    CostoVenta = input("Costo: ")
+    MetodoDePago = input("Metodo de pago: ")
+    print("------------------")
+    try:
+        a = f"insert into venta values('{Factura}', '{codvendedor}', '{Fecha}', '{Lugar}', '{CostoVenta}', '{MetodoDePago}')"
+        print(a)
+        cursor.execute(a)
+        connection.commit()
+        exitosa = 1
+        print("\n")
+        print("------------------")
+        print("Venta registrada correctamente")
+        print("------------------")
+        print("\n")
+    except:
+        print("No se pudo registrar la venta")
+        exitosa = 0
+
+    return exitosa
+
+def actualizandoEstado(chasis):
+    try:
+        a = f"update automovil set Estado = 'Vendido' where NroChasis = '{chasis}')"
+        print(a)
+        cursor.execute(a)
+        connection.commit()
+        print("\n")
+        print("------------------")
+        print("El estado del auto vendido ha sido cambiado")
+        print("La compra del auto ha sido exitosa!")
+        print("------------------")
+        print("\n")
+    except:
+        print("No se cambiar el estado")
+
+
+
 
 def realizarVenta():
     chasiss = input('Ingrese el numero de chasis para verificar disponibilidad: ')
@@ -202,6 +246,12 @@ def realizarVenta():
 
     if(a==1):
         print("La venta puede seguir adelante")
+        v = registroVenta()
+        if(v==1):
+            print("Cambiando el estado del vehiculo a Vendido")
+            actualizandoEstado(chasiss)
+        else:
+            print("No se pudo efectuar la compra")
     else:
         repMod = input("Desea registrar un nuevo modelo? Si/No: ")
         if(repMod == "Si"):
@@ -225,6 +275,13 @@ def realizarVenta():
         respVenta = input("Desea realizar la venta? Si/No ")
         if(respVenta == 'Si'):
             print("Iniciando proceso de venta: ")
+            chasisAComprar = input("Ingrese nuevamente el numero de chasis del auto que desea comprar: ")
+            v = registroVenta()
+            if (v == 1):
+                print("Cambiando el estado del vehiculo a Vendido")
+                actualizandoEstado(chasisAComprar)
+            else:
+                print("No se pudo efectuar la compra")
         else:
             print("Gracias por el registro, vuelva pronto ")
 

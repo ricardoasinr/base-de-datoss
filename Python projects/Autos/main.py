@@ -1,22 +1,6 @@
 import psycopg2
 
 
-def comp(t):
-    llamandoTabla = "SELECT * FROM "+str(t)
-    print(llamandoTabla)
-    return str(llamandoTabla)
-
-def llamarTabla(tabla):
-    nombreTabla=comp(tabla)
-    cursor = connection.cursor()
-    cursor.execute(nombreTabla)
-    row = cursor.fetchone()
-    print(row)
-    rows = cursor.fetchall()
-
-    for row in rows:
-        print(row)
-
 def crearVendedor():
     print("------------------")
     print("Creando nuevos vendedores: ")
@@ -41,7 +25,6 @@ def crearVendedor():
         print("\n")
     except:
         print("No se pudo crear el vendedor")
-
 
 def crearEquipo():
     print("------------------")
@@ -89,7 +72,7 @@ def crearVehiculo():
     print("Registrando un nuevo vehiculo: ")
     NroChasis = input("Numero de chasis: ")
     NITCS = input("*NIT de la concesionaria: ")
-    CodModelo = input("Codigo modelo: ")
+    CodModelo = input("*Codigo modelo: ")
     Color = input("Color: ")
     print("Por favor introcir de la siguiente manera '20190518' = 18/5/2019 ")
     FechaFabricacion = input("Fecha: ")
@@ -111,10 +94,52 @@ def crearVehiculo():
     except:
         print("No se pudo registrar el auto")
 
+def crearModelo():
+    print("------------------")
+    print("Registrando un nuevo Modelo: ")
+    codmodelo = input("Codigo del modelo: ")
+    marca = input("Marca: ")
+    NroPuertas = input("Puertas: ")
+    cilindradas = input("Cilindradas: ")
+    NroRuedas = input("Numero de ruedas: ")
+    Procedencia = input("Lugar de fabricacion: ")
+    CodPasajeros = input("Cantidad de pasajeros: ")
+
+    print("------------------")
+    try:
+        a = f"insert into modelo values('{codmodelo}', '{marca}', '{NroPuertas}', '{cilindradas}', '{NroRuedas}', '{Procedencia}', '{CodPasajeros}')"
+        print(a)
+        cursor.execute(a)
+        connection.commit()
+        print("\n")
+        print("------------------")
+        print("Modelo registrado correctamente")
+        print("------------------")
+        print("\n")
+    except:
+        print("No se pudo registrar el modelo")
+
+
+
+
+def comp(t):
+    llamandoTabla = "SELECT * FROM " + str(t)
+    print(llamandoTabla)
+    return str(llamandoTabla)
+def llamarTabla(tabla):
+    nombreTabla = comp(tabla)
+    cursor = connection.cursor()
+    cursor.execute(nombreTabla)
+    row = cursor.fetchone()
+    print(row)
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
 def crearTabla():
     nombreTabla = input("Nombre de la tabla: ")
     n = nombreTabla
-    #s = str(n)
+    # s = str(n)
     try:
 
         cursor = connection.cursor()
@@ -127,6 +152,7 @@ def crearTabla():
     finally:
         if connection is not None:
             connection.close()
+
 
 def eliminarTabla(nombreTabla):
     n = nombreTabla
@@ -167,20 +193,30 @@ def verificarEstado(chasis):
     print("\n")
     return (disponibilidad)
 
+def registroVenta():
+    
+
 def realizarVenta():
     chasiss = input('Ingrese el numero de chasis para verificar disponibilidad: ')
     a = verificarEstado(chasiss)
-    
+
     if(a==1):
         print("La venta puede seguir adelante")
     else:
-        crearVehiculo()
-        respEq = input("Desea registra un equipo extra? Si/No")
+        repMod = input("Desea registrar un nuevo modelo? Si/No: ")
+        if(repMod == "Si"):
+            crearModelo()
+
+        repV = input("Desea registrar un nuevo vehiculo? Si/No: ")
+        if (repV == "Si"):
+            crearVehiculo()
+
+        respEq = input("Desea registra un equipo extra? Si/No: ")
         if(respEq == "Si"):
             crearEquipo()
 
 
-        respTeq = input("Desea registra un tipo equipo extra? Si/No ")
+        respTeq = input("Desea registra un tipo equipo extra? Si/No: ")
         if (respTeq == "Si"):
            crearTipoEquipo()
 

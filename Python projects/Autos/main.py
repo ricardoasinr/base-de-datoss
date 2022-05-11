@@ -11,7 +11,7 @@ def crearVendedor():
     nombreV = input("Inserte el nombre del vendedor: ")
     telfV = input("Inserte el numero del vendedor: ")
     emailV = input("Inserte el email del vendedor: ")
-
+    cursor = connection.cursor()
     print("------------------")
     try:
         a = f"insert into vendedor values('{codigoV}', '{nitcsV}', '{nitofV}', '{nombreV}', '{telfV}', '{emailV}')"
@@ -25,6 +25,7 @@ def crearVendedor():
         print("\n")
     except:
         print("No se pudo crear el vendedor")
+
 def crearEquipo():
     print("------------------")
     print("Registrar equipamiento: ")
@@ -32,6 +33,7 @@ def crearEquipo():
     descripcion = input("Descripcion: ")
     precio = input("Precio: ")
     print("------------------")
+    cursor = connection.cursor()
     try:
         a = f"insert into equipo values('{codequipo}', '{descripcion}', '{precio}')"
         print(a)
@@ -44,10 +46,11 @@ def crearEquipo():
         print("\n")
     except:
         print("No se pudo registrar")
+
 def crearTipoEquipo():
     print("------------------")
     print("Registre el tipo de equipo: ")
-
+    cursor = connection.cursor()
     Codmodelo = input("*Modelo: ")
     Codequipo = input("*Registre el codigo del equipo: ")
     Tipoequipo = input("Descripcion: ")
@@ -62,8 +65,11 @@ def crearTipoEquipo():
         print("Registrado")
         print("------------------")
         print("\n")
-    except:
+    except NameError :
+        print(NameError.name)
         print("No se pudo registrar")
+
+
 def crearVehiculo():
     print("------------------")
     print("Registrando un nuevo vehiculo: ")
@@ -76,7 +82,7 @@ def crearVehiculo():
     LugarFabricacion = input("Lugar de fabricacion: ")
     Descuento = input("Descuento: ")
     estado = "En Stock"
-
+    cursor = connection.cursor()
     print("------------------")
     try:
         a = f"insert into automovil values('{NroChasis}', '{NITCS}', '{CodModelo}', '{Color}', '{FechaFabricacion}', '{LugarFabricacion}', '{Descuento}', '{estado}')"
@@ -90,7 +96,9 @@ def crearVehiculo():
         print("\n")
     except:
         print("No se pudo registrar el auto")
+
 def crearModelo():
+
     print("------------------")
     print("Registrando un nuevo Modelo: ")
     codmodelo = input("Codigo del modelo: ")
@@ -100,9 +108,10 @@ def crearModelo():
     NroRuedas = input("Numero de ruedas: ")
     Procedencia = input("Lugar de fabricacion: ")
     CodPasajeros = input("Cantidad de pasajeros: ")
-
+    cursor = connection.cursor()
     print("------------------")
     try:
+
         a = f"insert into modelo values('{codmodelo}', '{marca}', '{NroPuertas}', '{cilindradas}', '{NroRuedas}', '{Procedencia}', '{CodPasajeros}')"
         print(a)
         cursor.execute(a)
@@ -112,8 +121,10 @@ def crearModelo():
         print("Modelo registrado correctamente")
         print("------------------")
         print("\n")
-    except:
+    except Exception as e:
+        print(e)
         print("No se pudo registrar el modelo")
+
 def mostrarVendedores():
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM vendedor;")
@@ -194,6 +205,7 @@ def verificarEstado(chasis):
     print("\n")
     return (disponibilidad)
 def registroVenta():
+    cursor = connection.cursor()
     print("------------------")
     exitosa = 0
     print("Registrando venta: ")
@@ -221,9 +233,10 @@ def registroVenta():
         exitosa = 0
 
     return exitosa
+
 def actualizandoEstado(chasis):
     try:
-
+        cursor = connection.cursor()
         a = f"update automovil set Estado = 'Vendido' where NroChasis = '{chasis}'"
         print(a)
         cursor.execute(a)
@@ -236,7 +249,9 @@ def actualizandoEstado(chasis):
         print("\n")
     except:
         print("No se pudo cambiar el estado")
+
 def realizarVenta():
+    cursor = connection.cursor()
     chasiss = input('Ingrese el numero de chasis para verificar disponibilidad: ')
     a = verificarEstado(chasiss)
 

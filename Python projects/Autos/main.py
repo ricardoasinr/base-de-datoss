@@ -25,7 +25,6 @@ def crearVendedor():
         print("\n")
     except:
         print("No se pudo crear el vendedor")
-
 def crearEquipo():
     print("------------------")
     print("Registrar equipamiento: ")
@@ -45,7 +44,6 @@ def crearEquipo():
         print("\n")
     except:
         print("No se pudo registrar")
-
 def crearTipoEquipo():
     print("------------------")
     print("Registre el tipo de equipo: ")
@@ -66,7 +64,6 @@ def crearTipoEquipo():
         print("\n")
     except:
         print("No se pudo registrar")
-
 def crearVehiculo():
     print("------------------")
     print("Registrando un nuevo vehiculo: ")
@@ -93,7 +90,6 @@ def crearVehiculo():
         print("\n")
     except:
         print("No se pudo registrar el auto")
-
 def crearModelo():
     print("------------------")
     print("Registrando un nuevo Modelo: ")
@@ -118,9 +114,16 @@ def crearModelo():
         print("\n")
     except:
         print("No se pudo registrar el modelo")
+def mostrarVendedores():
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM vendedor;")
+    row = 0
+    rows = cursor.fetchall()
+    for row in rows:
+        print("Codigo: " + row[0], " | Nombre: " + row[3], " | Telefono: " + row[4])
 
-
-
+    print("------------------")
+    print("\n")
 
 def comp(t):
     llamandoTabla = "SELECT * FROM " + str(t)
@@ -152,8 +155,6 @@ def crearTabla():
     finally:
         if connection is not None:
             connection.close()
-
-
 def eliminarTabla(nombreTabla):
     n = nombreTabla
     try:
@@ -192,7 +193,6 @@ def verificarEstado(chasis):
 
     print("\n")
     return (disponibilidad)
-
 def registroVenta():
     print("------------------")
     exitosa = 0
@@ -221,10 +221,10 @@ def registroVenta():
         exitosa = 0
 
     return exitosa
-
 def actualizandoEstado(chasis):
     try:
-        a = f"update automovil set Estado = 'Vendido' where NroChasis = '{chasis}')"
+
+        a = f"update automovil set Estado = 'Vendido' where NroChasis = '{chasis}'"
         print(a)
         cursor.execute(a)
         connection.commit()
@@ -235,11 +235,7 @@ def actualizandoEstado(chasis):
         print("------------------")
         print("\n")
     except:
-        print("No se cambiar el estado")
-
-
-
-
+        print("No se pudo cambiar el estado")
 def realizarVenta():
     chasiss = input('Ingrese el numero de chasis para verificar disponibilidad: ')
     a = verificarEstado(chasiss)
@@ -286,9 +282,6 @@ def realizarVenta():
             print("Gracias por el registro, vuelva pronto ")
 
 
-
-
-
 #Creando la conexion
 try:
     connection=psycopg2.connect(
@@ -304,23 +297,9 @@ try:
 
 #Llamando a la tabla vendedor
     #llamarTabla("automovil")
-
-    cursor = connection.cursor()
-    cursor.execute("SELECT * FROM vendedor;")
-    row = 0
-    rows = cursor.fetchall()
-
-    for row in rows:
-        print("Codigo: " + row[0], " | Nombre: "+ row[3], " | Telefono: "+ row[4])
-
-    print("------------------")
-    print("\n")
-    row=0
 #Verificando automoviles
 # Verficando estado del vehiculo para realizar la venta
-    realizarVenta()
-
-
+    #realizarVenta()
 #Creando un nuevo vendedor:
     #crearVendedor()
     #--------------------------
@@ -331,16 +310,21 @@ try:
     #nombreTabla = input("Nombre de la tabla: ")
     #eliminarTabla(nombreTabla)
 
+    print("Bienvenido")
+    print("1. Realizar una venta ")
+    print("2. Ver los vendedores ")
+    print("3. Registrar un vendedor")
+    print("4. Registrar un nuevo modelo")
+    print("5. Ver modelos")
+    s = input("Seleccione una opcion: ")
+    if(s == "1"):
+        realizarVenta()
 
-
-
-
-    
 except Exception as e:
     print(e)
 
 finally:
     connection.close()
-    print("\n")
+
     print("------------------")
     print("Conexion finalizada")

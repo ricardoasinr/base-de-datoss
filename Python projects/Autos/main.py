@@ -75,21 +75,45 @@ def eliminarTabla(nombreTabla):
         if connection is not None:
             connection.close()
 
+def verficarEstado(chasis):
+    cursor = connection.cursor()
+    cursor.execute("SELECT nrochasis, Estado FROM automovil")
+    disponibilidad = 0
+    #cursor.execute("select nrochasis from automovil ")
+    row = 0
+    rows = cursor.fetchall()
+    for row in rows:
+        if ((row[0] == int(chasis)) and (row[1] == ('En Stock'))):
+            print("Chasis: " + str(row[0]) + " | Estado: " + row[1])
+            print("El auto se encuentra disponible")
+            disponibilidad = 1
+            
+    print("------------------")
+    return(disponibilidad)
+    print("\n")
+
+def realizarVenta():
+    chasis = input('Ingrese el numero de chasis para verificar disponibilidad: ')
+
+
+
+
 #Creando la conexion
 try:
     connection=psycopg2.connect(
         host='localhost',
-        port=54321,
+        port=5432,
         dbname='postgres',
         user='postgres',
-        password='my_password',
+        password='password',
     )
     print("Conexion segura")
     print("------------------")
 
 
 #Llamando a la tabla vendedor
-    #llamarTabla("vendedor")
+    #llamarTabla("automovil")
+
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM vendedor;")
     row = 0
@@ -97,17 +121,22 @@ try:
 
     for row in rows:
         print("Codigo: " + row[0], " | Nombre: "+ row[3], " | Telefono: "+ row[4])
+
     print("------------------")
     print("\n")
+    row=0
+#Verificando automoviles
+# Verficando estado del vehiculo para realizar la venta
+    verficarEstado()
 
 
-    cursor.callproc('ListaVendedores')
+    #cursor.callproc('ListaVendedores')
 
-    row = cursor.fetchone()
+    #row = cursor.fetchone()
 
-    while row is not None:
-        print(row)
-        row = cursor.fetchone()
+    #while row is not None:
+     #   print(row)
+      #  row = cursor.fetchone()
 
 
 
@@ -120,6 +149,8 @@ try:
 #Eliminando tabla
     #nombreTabla = input("Nombre de la tabla: ")
     #eliminarTabla(nombreTabla)
+
+
 
 
 

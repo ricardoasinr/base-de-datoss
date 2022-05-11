@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>814</IntrospectionStateNumber>
+      <IntrospectionStateNumber>827</IntrospectionStateNumber>
       <ServerVersion>14.2</ServerVersion>
       <StartupTime>1652139767</StartupTime>
       <TimeZones>true ACDT
@@ -1396,7 +1396,7 @@ true posixrules
 13391||10|C|G
 13391||-9223372036854775808|U|G
 13391||10|U|G</Grants>
-      <IntrospectionStateNumber>815</IntrospectionStateNumber>
+      <IntrospectionStateNumber>828</IntrospectionStateNumber>
       <ObjectId>13757</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4817,7 +4817,7 @@ true posixrules
     <schema id="261" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>815</IntrospectionStateNumber>
+      <IntrospectionStateNumber>828</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4858,74 +4858,80 @@ true posixrules
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="268" parent="261" name="vendedor">
+    <table id="268" parent="261" name="tipoequipo">
+      <ObjectId>16464</ObjectId>
+      <StateNumber>825</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="269" parent="261" name="vendedor">
       <ObjectId>16409</ObjectId>
       <StateNumber>777</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="261" name="venta">
+    <table id="270" parent="261" name="venta">
       <ObjectId>16424</ObjectId>
       <StateNumber>781</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="270" parent="262" name="nrochasis">
+    <column id="271" parent="262" name="nrochasis">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>798</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="271" parent="262" name="nitcs">
+    <column id="272" parent="262" name="nitcs">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>798</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="272" parent="262" name="codmodelo">
+    <column id="273" parent="262" name="codmodelo">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>798</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="273" parent="262" name="color">
+    <column id="274" parent="262" name="color">
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>798</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="274" parent="262" name="fechafabricacion">
+    <column id="275" parent="262" name="fechafabricacion">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>798</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="275" parent="262" name="lugarfabricacion">
+    <column id="276" parent="262" name="lugarfabricacion">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>798</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="262" name="descuento">
+    <column id="277" parent="262" name="descuento">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>798</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="262" name="estado">
+    <column id="278" parent="262" name="estado">
       <DataType>varchar(10)|0s</DataType>
       <Position>8</Position>
       <StateNumber>812</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="278" parent="262" name="fk_conce">
+    <foreign-key id="279" parent="262" name="fk_conce">
       <ColNames>nitcs</ColNames>
       <ObjectId>16439</ObjectId>
       <RefColNames>nitcs</RefColNames>
@@ -4936,7 +4942,7 @@ true posixrules
       <RefTableName>concesionaria</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="279" parent="262" name="fk_modelo">
+    <foreign-key id="280" parent="262" name="fk_modelo">
       <ColNames>codmodelo</ColNames>
       <ObjectId>16444</ObjectId>
       <RefColNames>codmodelo</RefColNames>
@@ -4947,7 +4953,7 @@ true posixrules
       <RefTableName>modelo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="280" parent="262" name="pk_chasis">
+    <index id="281" parent="262" name="pk_chasis">
       <ColNames>nrochasis</ColNames>
       <ObjectId>16437</ObjectId>
       <Primary>1</Primary>
@@ -4955,42 +4961,42 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="281" parent="262" name="pk_chasis">
+    <key id="282" parent="262" name="pk_chasis">
       <ColNames>nrochasis</ColNames>
       <ObjectId>16438</ObjectId>
       <Primary>1</Primary>
       <StateNumber>798</StateNumber>
       <UnderlyingIndexId>16437</UnderlyingIndexId>
     </key>
-    <column id="282" parent="263" name="nitcs">
+    <column id="283" parent="263" name="nitcs">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="263" name="nombrecs">
+    <column id="284" parent="263" name="nombrecs">
       <DataType>char(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="284" parent="263" name="direccioncs">
+    <column id="285" parent="263" name="direccioncs">
       <DataType>char(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1042</TypeId>
     </column>
-    <column id="285" parent="263" name="telefonocs">
+    <column id="286" parent="263" name="telefonocs">
       <DataType>numeric(8)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>741</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <index id="286" parent="263" name="pk_conce">
+    <index id="287" parent="263" name="pk_conce">
       <ColNames>nitcs</ColNames>
       <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
@@ -5001,35 +5007,35 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="287" parent="263" name="pk_conce">
+    <key id="288" parent="263" name="pk_conce">
       <ColNames>nitcs</ColNames>
       <ObjectId>16393</ObjectId>
       <Primary>1</Primary>
       <StateNumber>741</StateNumber>
       <UnderlyingIndexId>16392</UnderlyingIndexId>
     </key>
-    <column id="288" parent="264" name="codequipo">
+    <column id="289" parent="264" name="codequipo">
       <DataType>numeric(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>758</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="289" parent="264" name="descripcion">
+    <column id="290" parent="264" name="descripcion">
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>758</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="290" parent="264" name="precio">
+    <column id="291" parent="264" name="precio">
       <DataType>numeric(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>758</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <index id="291" parent="264" name="pk_equipo">
+    <index id="292" parent="264" name="pk_equipo">
       <ColNames>codequipo</ColNames>
       <ObjectId>16407</ObjectId>
       <Primary>1</Primary>
@@ -5037,63 +5043,63 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="292" parent="264" name="pk_equipo">
+    <key id="293" parent="264" name="pk_equipo">
       <ColNames>codequipo</ColNames>
       <ObjectId>16408</ObjectId>
       <Primary>1</Primary>
       <StateNumber>758</StateNumber>
       <UnderlyingIndexId>16407</UnderlyingIndexId>
     </key>
-    <column id="293" parent="265" name="codmodelo">
+    <column id="294" parent="265" name="codmodelo">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="294" parent="265" name="marca">
+    <column id="295" parent="265" name="marca">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="295" parent="265" name="nropuertas">
+    <column id="296" parent="265" name="nropuertas">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>737</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="296" parent="265" name="cilindradas">
+    <column id="297" parent="265" name="cilindradas">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>737</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="297" parent="265" name="nroruedas">
+    <column id="298" parent="265" name="nroruedas">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>737</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="298" parent="265" name="procedencia">
+    <column id="299" parent="265" name="procedencia">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>737</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="299" parent="265" name="codpasajeros">
+    <column id="300" parent="265" name="codpasajeros">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>737</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="300" parent="265" name="pk_modelo">
+    <index id="301" parent="265" name="pk_modelo">
       <ColNames>codmodelo</ColNames>
       <ObjectId>16387</ObjectId>
       <Primary>1</Primary>
@@ -5104,35 +5110,35 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="301" parent="265" name="pk_modelo">
+    <key id="302" parent="265" name="pk_modelo">
       <ColNames>codmodelo</ColNames>
       <ObjectId>16388</ObjectId>
       <Primary>1</Primary>
       <StateNumber>737</StateNumber>
       <UnderlyingIndexId>16387</UnderlyingIndexId>
     </key>
-    <column id="302" parent="266" name="codequipo">
+    <column id="303" parent="266" name="codequipo">
       <DataType>numeric(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>805</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="303" parent="266" name="nrochasis">
+    <column id="304" parent="266" name="nrochasis">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>805</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="266" name="nroserie">
+    <column id="305" parent="266" name="nroserie">
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>805</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="305" parent="266" name="fk_seriequipo">
+    <foreign-key id="306" parent="266" name="fk_seriequipo">
       <ColNames>codequipo</ColNames>
       <ObjectId>16454</ObjectId>
       <RefColNames>codequipo</RefColNames>
@@ -5143,7 +5149,7 @@ true posixrules
       <RefTableName>equipo</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="306" parent="266" name="fk_autoequipo">
+    <foreign-key id="307" parent="266" name="fk_autoequipo">
       <ColNames>nrochasis</ColNames>
       <ObjectId>16459</ObjectId>
       <RefColNames>nrochasis</RefColNames>
@@ -5154,7 +5160,7 @@ true posixrules
       <RefTableName>automovil</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="307" parent="266" name="pk_serie">
+    <index id="308" parent="266" name="pk_serie">
       <ColNames>codequipo
 nrochasis</ColNames>
       <ObjectId>16452</ObjectId>
@@ -5163,7 +5169,7 @@ nrochasis</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="308" parent="266" name="pk_serie">
+    <key id="309" parent="266" name="pk_serie">
       <ColNames>codequipo
 nrochasis</ColNames>
       <ObjectId>16453</ObjectId>
@@ -5171,42 +5177,42 @@ nrochasis</ColNames>
       <StateNumber>805</StateNumber>
       <UnderlyingIndexId>16452</UnderlyingIndexId>
     </key>
-    <column id="309" parent="267" name="nitso">
+    <column id="310" parent="267" name="nitso">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="310" parent="267" name="nitcs">
+    <column id="311" parent="267" name="nitcs">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="311" parent="267" name="nombreso">
+    <column id="312" parent="267" name="nombreso">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="312" parent="267" name="direccionso">
+    <column id="313" parent="267" name="direccionso">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="313" parent="267" name="telefonoso">
+    <column id="314" parent="267" name="telefonoso">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>748</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="314" parent="267" name="fk_servof_conce">
+    <foreign-key id="315" parent="267" name="fk_servof_conce">
       <ColNames>nitcs</ColNames>
       <ObjectId>16399</ObjectId>
       <RefColNames>nitcs</RefColNames>
@@ -5217,7 +5223,7 @@ nrochasis</ColNames>
       <RefTableName>concesionaria</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="315" parent="267" name="pk_servoficial">
+    <index id="316" parent="267" name="pk_servoficial">
       <ColNames>nitso</ColNames>
       <ObjectId>16397</ObjectId>
       <Primary>1</Primary>
@@ -5228,56 +5234,119 @@ nrochasis</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="316" parent="267" name="pk_servoficial">
+    <key id="317" parent="267" name="pk_servoficial">
       <ColNames>nitso</ColNames>
       <ObjectId>16398</ObjectId>
       <Primary>1</Primary>
       <StateNumber>748</StateNumber>
       <UnderlyingIndexId>16397</UnderlyingIndexId>
     </key>
-    <column id="317" parent="268" name="codvendedor">
+    <column id="318" parent="268" name="codmodelo">
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>825</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="319" parent="268" name="codequipo">
+      <DataType>numeric(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>825</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="320" parent="268" name="tipoequipo">
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>825</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="321" parent="268" name="fk_tipo_modelo">
+      <ColNames>codmodelo</ColNames>
+      <ObjectId>16469</ObjectId>
+      <RefColNames>codmodelo</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>pk_modelo</RefKeyName>
+      <StateNumber>825</StateNumber>
+      <RefTableId>16384</RefTableId>
+      <RefTableName>modelo</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="322" parent="268" name="fk_tipo_equipo">
+      <ColNames>codequipo</ColNames>
+      <ObjectId>16474</ObjectId>
+      <RefColNames>codequipo</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>pk_equipo</RefKeyName>
+      <StateNumber>825</StateNumber>
+      <RefTableId>16404</RefTableId>
+      <RefTableName>equipo</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="323" parent="268" name="pk_tipo">
+      <ColNames>codmodelo
+codequipo</ColNames>
+      <ObjectId>16467</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>825</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="324" parent="268" name="pk_tipo">
+      <ColNames>codmodelo
+codequipo</ColNames>
+      <ObjectId>16468</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>825</StateNumber>
+      <UnderlyingIndexId>16467</UnderlyingIndexId>
+    </key>
+    <column id="325" parent="269" name="codvendedor">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="268" name="nitcs">
+    <column id="326" parent="269" name="nitcs">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="319" parent="268" name="nitso">
+    <column id="327" parent="269" name="nitso">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="320" parent="268" name="nombrev">
+    <column id="328" parent="269" name="nombrev">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="321" parent="268" name="telefonov">
+    <column id="329" parent="269" name="telefonov">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="322" parent="268" name="email">
+    <column id="330" parent="269" name="email">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>777</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="323" parent="268" name="fk_vendedor_concesionaria">
+    <foreign-key id="331" parent="269" name="fk_vendedor_concesionaria">
       <ColNames>nitcs</ColNames>
       <ObjectId>16414</ObjectId>
       <RefColNames>nitcs</RefColNames>
@@ -5288,7 +5357,7 @@ nrochasis</ColNames>
       <RefTableName>concesionaria</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="324" parent="268" name="fk_vendedor_servoficial">
+    <foreign-key id="332" parent="269" name="fk_vendedor_servoficial">
       <ColNames>nitso</ColNames>
       <ObjectId>16419</ObjectId>
       <RefColNames>nitso</RefColNames>
@@ -5299,7 +5368,7 @@ nrochasis</ColNames>
       <RefTableName>serviciosof</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="325" parent="268" name="pk_vendedor">
+    <index id="333" parent="269" name="pk_vendedor">
       <ColNames>codvendedor</ColNames>
       <ObjectId>16412</ObjectId>
       <Primary>1</Primary>
@@ -5310,56 +5379,56 @@ nrochasis</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="326" parent="268" name="pk_vendedor">
+    <key id="334" parent="269" name="pk_vendedor">
       <ColNames>codvendedor</ColNames>
       <ObjectId>16413</ObjectId>
       <Primary>1</Primary>
       <StateNumber>777</StateNumber>
       <UnderlyingIndexId>16412</UnderlyingIndexId>
     </key>
-    <column id="327" parent="269" name="factura">
+    <column id="335" parent="270" name="factura">
       <DataType>numeric(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="328" parent="269" name="codvendedor">
+    <column id="336" parent="270" name="codvendedor">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="329" parent="269" name="fecha">
+    <column id="337" parent="270" name="fecha">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="330" parent="269" name="lugar">
+    <column id="338" parent="270" name="lugar">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="331" parent="269" name="costoventa">
+    <column id="339" parent="270" name="costoventa">
       <DataType>numeric(10,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1700</TypeId>
     </column>
-    <column id="332" parent="269" name="metododepago">
+    <column id="340" parent="270" name="metododepago">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>781</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="333" parent="269" name="fk_vendedor">
+    <foreign-key id="341" parent="270" name="fk_vendedor">
       <ColNames>codvendedor</ColNames>
       <ObjectId>16429</ObjectId>
       <RefColNames>codvendedor</RefColNames>
@@ -5370,7 +5439,7 @@ nrochasis</ColNames>
       <RefTableName>vendedor</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="334" parent="269" name="pk_venta">
+    <index id="342" parent="270" name="pk_venta">
       <ColNames>factura</ColNames>
       <ObjectId>16427</ObjectId>
       <Primary>1</Primary>
@@ -5378,7 +5447,7 @@ nrochasis</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="335" parent="269" name="pk_venta">
+    <key id="343" parent="270" name="pk_venta">
       <ColNames>factura</ColNames>
       <ObjectId>16428</ObjectId>
       <Primary>1</Primary>

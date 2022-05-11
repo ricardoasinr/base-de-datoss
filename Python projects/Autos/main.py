@@ -94,7 +94,8 @@ def crearVehiculo():
         print("Auto registrado correctamente")
         print("------------------")
         print("\n")
-    except:
+    except Exception as e:
+        print(e)
         print("No se pudo registrar el auto")
 
 def crearModelo():

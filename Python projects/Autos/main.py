@@ -331,10 +331,33 @@ try:
     print("2. Ver los vendedores ")
     print("3. Registrar un vendedor")
     print("4. Registrar un nuevo modelo")
-    print("5. Ver modelos")
+    print("5. Crear tabla ")
+    print("6. Eliminar tabla ")
     s = input("Seleccione una opcion: ")
     if(s == "1"):
         realizarVenta()
+
+    if (s == "2"):
+        mostrarVendedores()
+
+    if (s == "3"):
+        crearVendedor()
+
+    if (s == "4"):
+        crearModelo()
+
+    if (s == "5"):
+        crearTabla()
+
+    if (s == "6"):
+        eliminarTabla()
+
+        
+
+
+
+
+
 
 except Exception as e:
     print(e)

@@ -352,12 +352,6 @@ try:
     if (s == "6"):
         eliminarTabla()
 
-        
-
-
-
-
-
 
 except Exception as e:
     print(e)
